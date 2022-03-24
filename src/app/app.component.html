@@ -3,6 +3,14 @@
 <div class="search-form">
 	<orbit-list [satellites]="displayList"></orbit-list>
 	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
+	<span>
+		Method: 
+		<select name="searchType">
+			<option value="name">By Name</option>
+			<option value="orbit">By Orbit Type</option>
+			<option value="type">By Type</option>
+		</select>
+	</span>
 	<button (click)="search(searchTerm.value);">Search</button>
 </div>
 

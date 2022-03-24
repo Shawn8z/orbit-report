@@ -43,18 +43,46 @@ export class AppComponent {
 
 	search(searchTerm: string): void {
 
+		let searchType = document.querySelector("select").value;
 		let matchingSatellites: Satellite[] = [];
 		searchTerm = searchTerm.toLowerCase();
 
-		for(let i=0; i < this.sourceList.length; i++) {
+		if (searchType === 'name') {
+			// console.log("name running");
+			for(let i = 0; i < this.sourceList.length; i++) {
 
-			let name = this.sourceList[i].name.toLowerCase();
-
-			if (name.indexOf(searchTerm) >= 0) {
-				matchingSatellites.push(this.sourceList[i]);
+				let name = this.sourceList[i].name.toLowerCase();
+	
+				if (name.indexOf(searchTerm) >= 0) {
+					matchingSatellites.push(this.sourceList[i]);
+				}
+	
 			}
-
 		}
+		
+		if (searchType === 'orbit') {
+			for (let i = 0; i < this.sourceList.length; i++) {
+
+				let orbitType = this.sourceList[i].orbitType.toLowerCase();
+	
+				if (orbitType.indexOf(searchTerm) >= 0) {
+					matchingSatellites.push(this.sourceList[i]);
+				}
+			}
+		}
+		
+		if (searchType === "type") {
+			for (let i = 0; i < this.sourceList.length; i++) {
+
+				let type = this.sourceList[i].type.toLowerCase();
+	
+				if (type.indexOf(searchTerm) >= 0) {
+					matchingSatellites.push(this.sourceList[i]);
+				} 
+			}
+		}
+		
+		if (searchType === "") matchingSatellites = this.displayList 
 		// assign this.displayList to be the array of matching satellites
 		// this will cause Angular to re-make the table, but now only containing matches
 		this.displayList = matchingSatellites;
