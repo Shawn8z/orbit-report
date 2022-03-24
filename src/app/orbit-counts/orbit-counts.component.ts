@@ -9,6 +9,7 @@ import { Satellite } from '../satellite';
 export class OrbitCountsComponent implements OnInit {
 
 	@Input() satellites: Satellite[];
+	@Input() typeList: string[];
 
   constructor() { }
 
@@ -27,5 +28,10 @@ export class OrbitCountsComponent implements OnInit {
 	return count;
  }
 
+  getTypeLength(type: string): number {
+		let result: number = 0;
+		result = this.satellites.filter(obj => obj["type"] === type).length;
+		return result;
+  }
 
 }
