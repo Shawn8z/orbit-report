@@ -1,7 +1,7 @@
 <h1>Orbit Report</h1>
 
 <div class="search-form">
-	<orbit-list [satellites]="displayList"></orbit-list>
+	<app-orbit-list [satellites]="displayList"></app-orbit-list>
 	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
 	<span>
 		Method: 
