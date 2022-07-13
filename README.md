@@ -2,6 +2,10 @@
 
 ### LaunchCode Assignment
 
+
+### live link: https://shawn8z.github.io/orbit-report/
+
+
 ### What I needed to do
 - Fetch satellite data from a server, and use the returned data to poplate a list in the view.
 - In all the returned data, if a satellite`s type is space debris, give that <td> element a red color using class binding.
