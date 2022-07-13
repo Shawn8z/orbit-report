@@ -2,7 +2,7 @@
 
 ### LaunchCode Assignment
 
-### What I need to do
+### What I needed to do
 - Fetch satellite data from a server, and use the returned data to poplate a list in the view.
 - In all the returned data, if a satellite`s type is space debris, give that <td> element a red color using class binding.
 - Give orbit-count component the necessary property binding so it can display the number of different types of satellite in its UI.
