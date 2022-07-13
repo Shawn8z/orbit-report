@@ -1,27 +1,10 @@
 # OrbitReport
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+### LaunchCode Assignment
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### What I need to do
+- Fetch satellite data from a server, and use the returned data to poplate a list in the view.
+- In all the returned data, if a satellite`s type is space debris, give that <td> element a red color using class binding.
+- Give orbit-count component the necessary property binding so it can display the number of different types of satellite in its UI.
+- Add Zebra Stripes styling to the list in orbit-list component, using class binding base on the current index of the item in the statllite array.
+- Fix  the search function so it can work properly.
